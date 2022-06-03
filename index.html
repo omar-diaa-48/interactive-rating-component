@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="card">
+
+			<div class="star">
+				<img src="https://i.pinimg.com/originals/85/db/23/85db232a0e2f4d7ec93db9bcedeb97d8.png" alt="star-logo">
+			</div>
+
+			<p class="title">How did we do?</p>
+
+			<p class="info">Please let us know how we did with your support request. All feedback is appreciated to help
+				us improve
+				our offering!</p>
+
+			<div class="ratings">
+				<div class="rating">
+					<span>1</span>
+				</div>
+				<div class="rating">
+					<span>2</span>
+				</div>
+				<div class="rating">
+					<span>3</span>
+				</div>
+				<div class="rating">
+					<span>4</span>
+				</div>
+				<div class="rating">
+					<span>5</span>
+				</div>
+			</div>
+
+			<button>Submit</button>
+
+		</div>
+
+	</div>
+
+	<script>
+		const ratings = document.querySelectorAll('.rating')
+
+		ratings.forEach(ratingElement => {
+			ratingElement.addEventListener("click", () => {
+
+				ratings.forEach(ratingItem => {
+					ratingItem.classList.remove('active')
+				})
+
+				ratingElement.classList.add('active')
+
+			})
+		})
+
+	</script>
+
+</body>
+
+</html>
